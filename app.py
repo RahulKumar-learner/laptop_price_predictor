@@ -15,10 +15,10 @@ company = st.selectbox('Brand',df['Company'].unique())
 type_ = st.selectbox('Type',df['TypeName'].unique())
 
 # Ram
-ram = st.selectbox('RAM(in GB)',[2,4,6,8,12,16,24,32,64])
+ram = st.selectbox('RAM(in GB)',[2,4,6,8,12,16,24,32,64],index=4)
 
 # weight
-weight = st.number_input('Weight of the Laptop')
+weight = st.number_input('Weight of the Laptop',min_value=float(0.5), max_value=float(3),value=float(1.5))
 
 # Touchscreen
 
@@ -29,7 +29,7 @@ ips = st.selectbox('IPS',['No','Yes'])
 
 # screen size
 
-screen_size = st.number_input('Screen Size')
+screen_size = st.number_input('Screen Size',min_value=11.6, max_value=float(20), value=float(13.5))
 
 # resolution
 resolution = st.selectbox('Screen Resolution',['1920x1080','1366x768','1600x900',
